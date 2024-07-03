@@ -5,6 +5,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+a {
+  
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
 
 :root {
     --color-black: #101010;
@@ -55,7 +59,7 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
     height: 60%;
 }
 
@@ -77,12 +81,15 @@ body {
 
 .img-user {
     margin-right: 1rem;
+    
 }
 
 .img-user img {
     width: 100px; 
     height: 100px;
     border-radius: 50%;
+   
+
 }
 
 .info-user {
@@ -112,7 +119,7 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
 }
 
 .redes-sociais {
@@ -133,7 +140,6 @@ body {
 }
 
 .box-social1 i, .box-social2 i {
-    font-size: 2.5rem;
     color: var(--color-black);
 }
 
@@ -156,8 +162,8 @@ body {
     border-radius: 10px;
     display: flex;
     justify-content: space-between; /* Distribui os itens horizontalmente */
-    align-items: center;
-    margin-bottom: 1rem; /* Espaçamento inferior */
+    align-items: left;
+   /* Espaçamento inferior */
 
     /* Ajustes para mobile */
     flex-wrap: wrap; /* Quebra para várias linhas em telas menores */
@@ -167,12 +173,12 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 }
 
 .text-skills {
     font-size: 1.2rem;
-    text-transform: uppercase;
+    
     font-weight: bold;
     color: var(--color-destaque);
 }
@@ -236,7 +242,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--color-destaque);
+    background-color:#8fe20e;
     padding: 1.5rem; /* Ajuste o padding conforme necessário */
 }
 
@@ -281,6 +287,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    animation: pulse 3s infinite ease-in-out;
+    transition: transform 0.3s ease;
 }
 
 .btn2 {
@@ -326,63 +334,98 @@ body {
         padding: 0.7rem 1rem;
     }
 }
-.skills {
+.projects {
     width: 100%;
     height: auto;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between; /* Distribui os itens horizontalmente */
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem; /* Espaçamento inferior */
-
-    /* Ajustes para mobile */
-    flex-wrap: wrap; /* Quebra para várias linhas em telas menores */
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Permite que os cards quebrem em várias linhas em telas menores */
+    padding: 1rem; /* Espaçamento interno dos cards */
+    background-color: #222; /* Cor de fundo dos cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra sutil para os cards */
 }
 
 .content-projects {
-    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-   
-}
-
-.text-projects {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
+    width: 100%; /* Ajusta o tamanho para acomodar o ícone e o texto */
 }
 
 .projects-icons {
-    width: 100%;
-    max-width: 90%;
-     /* Espaço entre os ícones */
     display: flex;
-    gap: 2px;
-     /* Centraliza os ícones */
-    flex-wrap: wrap; /* Quebra para várias linhas em telas menores */
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    margin-right: 1rem;
 }
+
 .projects-icons i {
-    color: white;
     font-size: 1.5rem;
-    transition: color 0.3s;
-    margin: 5px; /* Espaço interno em torno de cada ícone */
-    justify-content: left;
-
-    
+    color: white; /* Cor padrão do ícone */
+    gap: 1.5rem;
 }
-.projects-icons p{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: white;
-        
-      
+
+.projects-icons .fa-dog,
+.projects-icons .fa-pizza-slice {
+    animation: pulse 1.5s infinite ease-in-out; /* Animação pulsante do ícone */
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
     }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
+.project-text {
+    display: flex;
+    flex-direction: column;
+}
 
+.project-text p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
 
+.technologias {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem; /* Espaçamento entre as tecnologias */
+}
+
+.technologias i {
+    font-size: 1.2rem; /* Tamanho das tecnologias */
+    color: white; /* Cor das tecnologias */
+}
+.projects-icons .fa-html5:hover {
+    color: #e34f26;
+}
+
+.projects-icons .fa-css3-alt:hover {
+    color: #1572b6;
+}
+
+.projects-icons .fa-database:hover {
+    color: #1572b6;
+}
+
+.projects-icons .fa-java:hover {
+    color: rgb(222, 3, 3);
+}
+.projects-icons .fa-dog:hover {
+    color: rgb(136, 0, 131);
+}
+
+.projects-icons .fa-pizza-slice:hover {
+    color: red;
+}
