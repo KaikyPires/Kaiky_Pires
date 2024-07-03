@@ -357,7 +357,7 @@ body {
 .projects-icons {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    gap: 20px; /* Espaçamento entre o ícone e o texto */
     margin-right: 1rem;
 }
 
@@ -369,7 +369,7 @@ body {
 
 .projects-icons .fa-dog,
 .projects-icons .fa-pizza-slice {
-    animation: pulse 1.5s infinite ease-in-out; /* Animação pulsante do ícone */
+    animation: pulse 0.8s infinite ease-in-out; /* Animação pulsante do ícone */
     cursor: pointer;
 }
 
