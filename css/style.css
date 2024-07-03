@@ -5,9 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 a {
-  
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    text-decoration: none;
 }
 
 :root {
@@ -111,6 +111,10 @@ body {
     font-weight: 400;
     color: var(--color-destaque);
 }
+.user:hover{
+    transform: scale(1.02); 
+}
+
 
 /* WIDGET 2 */
 .center {
@@ -125,17 +129,16 @@ body {
 .redes-sociais {
     display: flex;
     width: 100%;
-    
 }
 
 .box-social1, .box-social2 {
     background-color: var(--color-white);
-    height: 90px;
-    flex: 1; /* Cada um ocupa metade do espaço disponível */
+    height: 70px;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s;
     border-radius: 10px;
 }
 
@@ -144,15 +147,15 @@ body {
 }
 
 .box-social1:hover, .box-social2:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .box-social1:hover i {
-    color: #181717; /* Cor do ícone ao passar o mouse sobre o GitHub */
+    color: #181717;
 }
 
 .box-social2:hover i {
-    color: #0e76a8; /* Cor do ícone ao passar o mouse sobre o LinkedIn */
+    color: #0e76a8;
 }
 
 /* Estilos para as habilidades */
@@ -161,24 +164,19 @@ body {
     height: auto;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between; /* Distribui os itens horizontalmente */
+    justify-content: space-between;
     align-items: left;
-   /* Espaçamento inferior */
-
-    /* Ajustes para mobile */
-    flex-wrap: wrap; /* Quebra para várias linhas em telas menores */
+    flex-wrap: wrap;
 }
 
 .content-skills {
     width: 100%;
     display: flex;
     flex-direction: column;
-    
 }
 
 .text-skills {
     font-size: 1.2rem;
-    
     font-weight: bold;
     color: var(--color-destaque);
 }
@@ -186,23 +184,22 @@ body {
 .skills-icons {
     width: 100%;
     max-width: 90%;
-    gap: 10px; /* Espaço entre os ícones */
+    gap: 10px;
     display: flex;
-    justify-content: center; /* Centraliza os ícones */
-    flex-wrap: wrap; /* Quebra para várias linhas em telas menores */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .skills-icons i {
     color: white;
     font-size: 1.5rem;
     transition: color 0.3s;
-    margin: 5px; /* Espaço interno em torno de cada ícone */
+    margin: 5px;
 }
 
 .skills-icons i:hover {
     cursor: pointer;
 }
-
 
 .skills-icons .fa-html5:hover {
     color: #e34f26;
@@ -242,8 +239,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color:#8fe20e;
-    padding: 1.5rem; /* Ajuste o padding conforme necessário */
+    background-color: #8fe20e;
+    padding: 1.5rem;
 }
 
 .content-contato {
@@ -258,25 +255,25 @@ body {
 }
 
 .text-contato h1 {
-    font-size: 1.2rem; /* Ajuste o tamanho conforme necessário */
+    font-size: 1.2rem;
     color: var(--color-white);
 }
 
 .lista-contato {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Espaço entre os itens da lista */
+    gap: 1rem;
 }
 
 .lista-contato a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem; /* Ajuste o tamanho conforme necessário */
+    font-size: 1rem;
 }
 
 .text-contato span {
-    font-size: 1rem; /* Ajuste o tamanho conforme necessário */
+    font-size: 1rem;
     font-weight: 400;
     color: var(--color-white);
 }
@@ -287,8 +284,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    animation: pulse 3s infinite ease-in-out;
-    transition: transform 0.3s ease;
+    animation: pulse 6s infinite;
+    transition: transform 0.5s ease;
 }
 
 .btn2 {
@@ -300,10 +297,13 @@ body {
     text-decoration: none;
 }
 
-/* Media query para dispositivos móveis */
+.btn2:hover {
+    transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
-    .skills {
-        padding: 2rem; /* Ajuste o padding conforme necessário */
+    .skills, .contato {
+        padding: 2rem;
     }
 
     .content-skills {
@@ -312,10 +312,6 @@ body {
 
     .skills-icons i {
         font-size: 1.2rem;
-    }
-
-    .contato {
-        padding: 2rem; /* Ajuste o padding conforme necessário */
     }
 
     .text-contato h1 {
@@ -334,6 +330,8 @@ body {
         padding: 0.7rem 1rem;
     }
 }
+
+/* Projects */
 .projects {
     width: 100%;
     height: auto;
@@ -342,34 +340,33 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    flex-wrap: wrap; /* Permite que os cards quebrem em várias linhas em telas menores */
-    padding: 1rem; /* Espaçamento interno dos cards */
-    background-color: #222; /* Cor de fundo dos cards */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra sutil para os cards */
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: #222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .content-projects {
     display: flex;
     align-items: center;
-    width: 100%; /* Ajusta o tamanho para acomodar o ícone e o texto */
+    width: 100%;
 }
 
 .projects-icons {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaçamento entre o ícone e o texto */
-    margin-right: 1rem;
+    gap: 10px;
 }
 
 .projects-icons i {
     font-size: 1.5rem;
-    color: white; /* Cor padrão do ícone */
-    gap: 1.5rem;
+    color: white;
 }
 
 .projects-icons .fa-dog,
 .projects-icons .fa-pizza-slice {
-    animation: pulse 1.5s infinite ease-in-out; /* Animação pulsante do ícone */
+    animation: pulse 1.3s infinite ease-in-out;
     cursor: pointer;
 }
 
@@ -378,7 +375,7 @@ body {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
     100% {
         transform: scale(1);
@@ -400,13 +397,14 @@ body {
 .technologias {
     display: flex;
     align-items: center;
-    gap: 0.7rem; /* Espaçamento entre as tecnologias */
+    gap: 0.7rem;
 }
 
 .technologias i {
-    font-size: 1.2rem; /* Tamanho das tecnologias */
-    color: white; /* Cor das tecnologias */
+    font-size: 1.2rem;
+    color: white;
 }
+
 .projects-icons .fa-html5:hover {
     color: #e34f26;
 }
@@ -422,10 +420,31 @@ body {
 .projects-icons .fa-java:hover {
     color: rgb(222, 3, 3);
 }
+
 .projects-icons .fa-dog:hover {
     color: rgb(136, 0, 131);
 }
 
 .projects-icons .fa-pizza-slice:hover {
     color: red;
+}
+
+.project-text p:hover {
+    color: #8fe20e;
+}
+.projects:hover {
+    transform: scale(1.02); /* Aumenta um pouco o tamanho do card quando o mouse está sobre ele */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ajusta a sombra para destacar o card */
+}
+.skills:hover {
+    transform: scale(1.02); /* Aumenta um pouco o tamanho do card quando o mouse está sobre ele */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ajusta a sombra para destacar o card */
+}
+.user:hover {
+    transform: scale(1.02); /* Aumenta um pouco o tamanho do card quando o mouse está sobre ele */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ajusta a sombra para destacar o card */
+}
+.contato:hover {
+    transform: scale(1.02); /* Aumenta um pouco o tamanho do card quando o mouse está sobre ele */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ajusta a sombra para destacar o card */
 }
