@@ -423,11 +423,11 @@ body {
     color: rgb(222, 3, 3);
 }
 .projects-icons .fa-dog:hover {
-    color: rgb(136, 0, 131);
+    color: #8fe20e;
 }
 
 .projects-icons .fa-pizza-slice:hover {
-    color: red;
+    color: #8fe20e;
 }
 .project-text p:hover {
     color: #8fe20e;
@@ -439,11 +439,86 @@ body {
 .skills:hover {
     transform: scale(1.02);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
 .user:hover {
     transform: scale(1.02);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
 .contato:hover {
     transform: scale(1.02); 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
 }
+.curriculo-card:hover {
+    transform: scale(1.02); /* Aumenta um pouco o tamanho do card quando o mouse está sobre ele */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ajusta a sombra para destacar o card */
+}
 
+.curriculo-card {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Permite que os cards quebrem em várias linhas em telas menores */
+    padding: 1rem; /* Espaçamento interno dos cards */
+    background-color: #8fe20e; /* Cor de fundo dos cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra sutil para os cards */
+}
+
+.content-curriculo {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ajusta o tamanho para acomodar o ícone e o texto */
+}
+
+.curriculo-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre o ícone e o texto */
+    margin-right: 1rem;
+}
+
+.curriculo-icons i {
+    font-size: 1.5rem;
+    color: white; /* Cor padrão do ícone */
+    gap: 1.5rem;
+}
+
+.projects-icons .fa-dog,
+.projects-icons .fa-pizza-slice, 
+.curriculo-icons .fa-file{
+    animation: pulse 1s infinite ease-in-out; /* Animação pulsante do ícone */
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.curriculo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.curriculo-text p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #202020;
+    margin: 0;
+}
+.curriculo-icons .fa-file:hover{
+    color: #202020;
+}
+.curriculo-text p:hover{
+    color: white;
+}

@@ -114,13 +114,13 @@
 
     .text-contato h1 {
         font-size: 1.2rem; 
-        color: #000000; 
+        color: #202020; 
     }
 
 
     .text-contato span {
         font-size: 1rem;
-        color: #000000; 
+        color: #202020; 
         text-align: center;
         display: block;
         margin-bottom: 1rem; 
@@ -128,7 +128,7 @@
 
    
     .lista-contato a {
-        color: #000000; 
+        color: #202020; 
         text-decoration: none;
         margin-bottom: 0.5rem;
         display: block;
@@ -139,7 +139,7 @@
 
     .btn-contato a {
         text-decoration: none;
-        color: #000000; 
+        color: #202020; 
         background-color: #ffffff; 
         padding: 0.5rem 1rem; 
         border-radius: 5px; 
@@ -152,4 +152,5 @@
         padding: 10px 20px; 
         border-radius: 10px;
         text-decoration: none;
+        font-weight: bold;
     }
