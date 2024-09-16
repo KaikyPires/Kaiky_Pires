@@ -422,11 +422,14 @@ body {
 .projects-icons .fa-java:hover {
     color: rgb(222, 3, 3);
 }
-.projects-icons .fa-dog:hover {
-    color: #8fe20e;
+.projects-icons .fa-js:hover {
+    color: #f7df1e;
+}
+.projects-icons .fa-ghost:hover {
+    color: rgb(222, 3, 3);
 }
 
-.projects-icons .fa-pizza-slice:hover {
+.projects-icons .fa-futbol:hover {
     color: #8fe20e;
 }
 .project-text p:hover {
@@ -486,8 +489,8 @@ body {
     gap: 1.5rem;
 }
 
-.projects-icons .fa-dog,
-.projects-icons .fa-pizza-slice, 
+.projects-icons .fa-futbol,
+.projects-icons .fa-ghost, 
 .curriculo-icons .fa-file{
     animation: pulse 1s infinite ease-in-out; /* Animação pulsante do ícone */
     cursor: pointer;
